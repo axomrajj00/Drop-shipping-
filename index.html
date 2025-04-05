@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Trading Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Color Trading (Synced)</h1>
+    <p>Balance: ₹<span id="balance">100</span></p>
+    <div class="colors">
+      <button class="color-btn red" onclick="placeBet('Red')">Red</button>
+      <button class="color-btn green" onclick="placeBet('Green')">Green</button>
+      <button class="color-btn violet" onclick="placeBet('Violet')">Violet</button>
+    </div>
+    <p>Current Result: <span id="result">Waiting...</span></p>
+    <button onclick="recharge(100)">Free Recharge ₹100</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

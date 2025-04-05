@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Panel</h1>
+    <p>Set next round result:</p>
+    <select id="setResult">
+      <option value="Red">Red</option>
+      <option value="Green">Green</option>
+      <option value="Violet">Violet</option>
+    </select>
+    <button onclick="updateResult()">Update</button>
+    <p>Current: <span id="currentResult">None</span></p>
+  </div>
+  <script>
+    const setResult = document.getElementById('setResult');
+    const currentResult = document.getElementById('currentResult');
+
+    function updateResult() {
+      const value = setResult.value;
+      localStorage.setItem('syncedResult', value);
+      currentResult.innerText = value;
+      alert("Result updated to " + value);
+    }
+
+    window.onload = () => {
+      const value = localStorage.getItem('syncedResult') || "None";
+      currentResult.innerText = value;
+    }
+  </script>
+</body>
+</html>

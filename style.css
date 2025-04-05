@@ -1,0 +1,22 @@
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f0f0f0;
+}
+.container {
+  margin-top: 50px;
+}
+.color-btn {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+.red { background-color: red; }
+.green { background-color: green; }
+.violet { background-color: purple; }
